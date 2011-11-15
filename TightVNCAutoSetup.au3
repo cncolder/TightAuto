@@ -62,7 +62,7 @@ Func WaitClientOnline()
 EndFunc
 
 Func ShowLocalIpAddress()
-	TrayTip("VNC", "本机IP: " & @IPAddress1 & " " & @IPAddress2, 30, 1)
+	TrayTip("VNC", "本机IP: " & @IPAddress1, 30, 1)
 EndFunc
 
 Func RunVNC()
@@ -148,7 +148,6 @@ EndFunc
 Func ConnectVNCViewer()
 	Do
 		Run("WinVNC.exe -connect " & $ipaddr)
-		TrayTip("VNC", "正在连接...", 5, 1)
 		Sleep(5000)
 		
 		RunCmd("netstat -n > netstat.txt")
@@ -159,9 +158,6 @@ Func ConnectVNCViewer()
 		$vnc_regexp = 'TCP\s+.+' & $ip_regexp & '\s+ESTABLISHED'
 		$connected = StringRegExp($result, $vnc_regexp)
 	Until $connected
-	
-	TrayTip("VNC", "管理员现在可以操作您的计算机.", 10, 1)
-	Sleep(10000)
 EndFunc
 
 Func NotifyOrConnectToClient()
