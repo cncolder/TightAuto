@@ -56,13 +56,13 @@ EndFunc
 ; Ping until client online.
 Func WaitClientOnline()
 	Do
-		TrayTip("VNC", "¼ì²âÍøÂç...", 1, 1)
+		TrayTip("VNC", "æ£€æµ‹è¿æ¥...", 1, 1)
 		Sleep(1000)
 	Until Ping($ipaddr)
 EndFunc
 
 Func ShowLocalIpAddress()
-	TrayTip("VNC", "±¾»úIP: " & @IPAddress1, 30, 1)
+	TrayTip("VNC", "æœ¬æœºIPåœ°å€: " & @IPAddress1, 30, 1)
 EndFunc
 
 Func RunVNC()
