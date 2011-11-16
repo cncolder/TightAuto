@@ -1,13 +1,10 @@
-TightVNC auto setup script
-===
+# TightVNC auto setup script
 
-What's this?
----
+### What's this?
 
 The main body is an autoit script. It import vnc register file to your Windows system. Then run TightVNC server, wait client connect in.
 
-How it works?
----
+### How it works?
 
 The 1st step. WinRAR self-extract package put some file to your temp folder and run autoit script.
 
@@ -20,8 +17,7 @@ In 2nd step. It
 3. send growl notification if client is mac os x (Not Yet Implementation) 
 4. connect to vnc viewer if client run vnc viewer as listening mode.
 
-Thanks
----
+### Thanks
 
 TightVNC - <http://www.tightvnc.com/>
 
